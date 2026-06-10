@@ -4,7 +4,8 @@ version = "0.1.3"
 edition = "2024"
 
 [dependencies]
-bc_utils_lg ={ git = "https://github.com/feUHMYHiEggtcIGA/bc_utils_lg.git"}
+bc_utils_lg ={path = "../bc_utils_lg"}
+# bc_utils_lg ={ git = "https://github.com/feUHMYHiEggtcIGA/bc_utils_lg.git"}
 hmac = "0.12"
 sha2 = "0.10"
 hex = "0.4"
@@ -12,4 +13,5 @@ reqwest = { version = "0.11.27", features = ["json"] }
 tokio = "1.4"
 
 [dev-dependencies]
-bc_exch_api_funcs = {git = "https://github.com/feUHMYHiEggtcIGA/bc_exch_api_funcs.git"}
+# bc_exch_api_funcs = {git = "https://github.com/feUHMYHiEggtcIGA/bc_exch_api_funcs.git"}
+bc_exch_api_funcs = {path = "../bc_exch_api_funcs"}
