@@ -1,18 +1,12 @@
+use hex;
 use hmac::{Hmac, Mac};
 use sha2::Sha256;
-use hex;
-
 
 pub fn hmac_(
     key: &[u8],
     msg: &[u8],
-) -> String
-{
+) -> String {
     let mut mac = Hmac::<Sha256>::new_from_slice(key).unwrap();
     mac.update(msg);
-    hex::encode(
-        mac 
-            .finalize()
-            .into_bytes()
-    )
+    hex::encode(mac.finalize().into_bytes())
 }
